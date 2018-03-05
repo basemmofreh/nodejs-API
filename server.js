@@ -49,7 +49,19 @@ app.get('/about',function(req,res){
   })
 });
 
+app.get('/portfolio',function(req,res){
+  res.render('portfolio.hbs',{
+    pageName: "This is a small sample of my projects"
+  })
+});
 
+
+app.all('*', function(req, res) {
+  res.render('home.hbs',{
+    pageName:'Welcome this is basem mofre portfoilo',
+  });
+
+})
 app.listen(port,function(){
   console.log(`server is up and running ${port}`);
 })
