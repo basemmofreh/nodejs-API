@@ -4,7 +4,8 @@
   "description": "facebook commenting app",
   "main": "index.js",
   "scripts": {
-    "test": "nothing"
+    "test": "nothing",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

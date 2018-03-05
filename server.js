@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
 const fs = require('fs');
+
+const port = process.env.PORT || 3000;
 hbs.registerPartials(__dirname+'/views/partials');
 app.set('view engine','hbs');
 
@@ -48,6 +50,6 @@ app.get('/about',function(req,res){
 });
 
 
-app.listen('2360',function(){
-  console.log("server is up and running 2360");
+app.listen(port,function(){
+  console.log(`server is up and running ${port}`);
 })
