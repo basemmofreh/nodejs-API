@@ -9,9 +9,9 @@ hbs.registerPartials(__dirname+'/views/partials');
 app.set('view engine','hbs');
 
 
-app.use((req,res)=>{
-  res.render('maintainance.hbs');
-})
+// app.use((req,res)=>{
+//   res.render('maintainance.hbs');
+// })
 app.use(express.static(__dirname+'/public'));
 
 hbs.registerHelper('getCurrentYear',()=>{
